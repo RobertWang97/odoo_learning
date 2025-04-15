@@ -1,0 +1,118 @@
+{
+  "id": 6,
+  "jsonrpc": "2.0",
+  "method": "call",
+  "params": {
+    "model": "mrp.production",
+    "method": "web_search_read",
+    "args": [],
+    "kwargs": {
+      "specification": {
+        "company_id": {
+          "fields": {
+            "display_name": {}
+          }
+        },
+        "product_uom_category_id": {
+          "fields": {}
+        },
+        "priority": {},
+        "message_needaction": {},
+        "name": {},
+        "project_id": {
+          "fields": {
+            "display_name": {}
+          }
+        },
+        "date_start": {},
+        "date_finished": {},
+        "date_deadline": {},
+        "product_id": {
+          "fields": {
+            "display_name": {}
+          }
+        },
+        "lot_producing_id": {
+          "fields": {
+            "display_name": {}
+          }
+        },
+        "bom_id": {
+          "fields": {
+            "display_name": {}
+          }
+        },
+        "activity_ids": {
+          "fields": {}
+        },
+        "activity_exception_decoration": {},
+        "activity_exception_icon": {},
+        "activity_state": {},
+        "activity_summary": {},
+        "activity_type_icon": {},
+        "activity_type_id": {
+          "fields": {
+            "display_name": {}
+          }
+        },
+        "origin": {},
+        "user_id": {
+          "fields": {
+            "display_name": {}
+          }
+        },
+        "components_availability_state": {},
+        "components_availability": {},
+        "reservation_state": {},
+        "product_qty": {},
+        "duration_expected": {},
+        "duration": {},
+        "state": {},
+        "delay_alert_date": {},
+        "is_delayed": {},
+        "json_popover": {}
+      },
+      "offset": 0,
+      "order": "",
+      "limit": 80,
+      "context": {
+        "lang": "en_US",
+        "tz": "Asia/Hong_Kong",
+        "uid": 2,
+        "allowed_company_ids": [
+          1
+        ],
+        "bin_size": true,
+        "params": {
+          "action": "manufacturing",
+          "actionStack": [
+            {
+              "action": "manufacturing"
+            }
+          ]
+        },
+        "default_company_id": 1,
+        "current_company_id": 1
+      },
+      "count_limit": 10001,
+      "domain": [
+        "&",
+        [
+          "picking_type_id.active",
+          "=",
+          true
+        ],
+        [
+          "state",
+          "in",
+          [
+            "draft",
+            "confirmed",
+            "progress",
+            "to_close"
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+    "jsonrpc": "2.0",
+    "id": 6,
+    "result": {
+        "length": 4,
+        "records": [
+            {
+                "id": 1,
+                "company_id": {
+                    "id": 1,
+                    "display_name": "My Company (San Francisco)"
+                },
+                "product_uom_category_id": {
+                    "id": 1
+                },
+                "priority": "0",
+                "message_needaction": false,
+                "name": "WH/MO/00001",
+                "project_id": false,
+                "date_start": "2025-04-07 07:47:08",
+                "date_finished": "2025-04-17 07:47:08",
+                "date_deadline": false,
+                "product_id": {
+                    "id": 8,
+                    "display_name": "[FURN_7800] Desk Combination"
+                },
+                "lot_producing_id": false,
+                "bom_id": {
+                    "id": 1,
+                    "display_name": "[FURN_7800] Desk Combination"
+                },
+                "activity_ids": [],
+                "activity_exception_decoration": false,
+                "activity_exception_icon": false,
+                "activity_state": false,
+                "activity_summary": false,
+                "activity_type_icon": false,
+                "activity_type_id": false,
+                "origin": false,
+                "user_id": {
+                    "id": 1,
+                    "display_name": "OdooBot"
+                },
+                "components_availability_state": "unavailable",
+                "components_availability": "Not Available",
+                "reservation_state": "confirmed",
+                "product_qty": 3.0,
+                "duration_expected": 180.0,
+                "duration": 0.0,
+                "state": "confirmed",
+                "delay_alert_date": false,
+                "is_delayed": false,
+                "json_popover": false
+            },
+            {
+                "id": 3,
+                "company_id": {
+                    "id": 1,
+                    "display_name": "My Company (San Francisco)"
+                },
+                "product_uom_category_id": {
+                    "id": 1
+                },
+                "priority": "0",
+                "message_needaction": false,
+                "name": "WH/MO/00003",
+                "project_id": false,
+                "date_start": "2025-04-07 07:47:09",
+                "date_finished": "2025-04-07 08:47:09",
+                "date_deadline": false,
+                "product_id": {
+                    "id": 46,
+                    "display_name": "[FURN_8522] Table Top"
+                },
+                "lot_producing_id": false,
+                "bom_id": {
+                    "id": 3,
+                    "display_name": "[FURN_8522] Table Top"
+                },
+                "activity_ids": [],
+                "activity_exception_decoration": false,
+                "activity_exception_icon": false,
+                "activity_state": false,
+                "activity_summary": false,
+                "activity_type_icon": false,
+                "activity_type_id": false,
+                "origin": false,
+                "user_id": {
+                    "id": 1,
+                    "display_name": "OdooBot"
+                },
+                "components_availability_state": "available",
+                "components_availability": "Available",
+                "reservation_state": "assigned",
+                "product_qty": 1.0,
+                "duration_expected": 60.0,
+                "duration": 0.0,
+                "state": "confirmed",
+                "delay_alert_date": false,
+                "is_delayed": false,
+                "json_popover": false
+            },
+            {
+                "id": 2,
+                "company_id": {
+                    "id": 1,
+                    "display_name": "My Company (San Francisco)"
+                },
+                "product_uom_category_id": {
+                    "id": 1
+                },
+                "priority": "0",
+                "message_needaction": false,
+                "name": "WH/MO/00002",
+                "project_id": false,
+                "date_start": "2025-04-08 07:47:00",
+                "date_finished": "2025-04-08 08:47:00",
+                "date_deadline": false,
+                "product_id": {
+                    "id": 45,
+                    "display_name": "[FURN_9666] Table"
+                },
+                "lot_producing_id": false,
+                "bom_id": {
+                    "id": 2,
+                    "display_name": "[FURN_9666] Table"
+                },
+                "activity_ids": [],
+                "activity_exception_decoration": false,
+                "activity_exception_icon": false,
+                "activity_state": false,
+                "activity_summary": false,
+                "activity_type_icon": false,
+                "activity_type_id": false,
+                "origin": false,
+                "user_id": {
+                    "id": 1,
+                    "display_name": "OdooBot"
+                },
+                "components_availability_state": false,
+                "components_availability": false,
+                "reservation_state": false,
+                "product_qty": 1.0,
+                "duration_expected": 60.0,
+                "duration": 0.0,
+                "state": "draft",
+                "delay_alert_date": false,
+                "is_delayed": false,
+                "json_popover": false
+            },
+            {
+                "id": 8,
+                "company_id": {
+                    "id": 1,
+                    "display_name": "My Company (San Francisco)"
+                },
+                "product_uom_category_id": {
+                    "id": 1
+                },
+                "priority": "0",
+                "message_needaction": false,
+                "name": "WH/MO/00008",
+                "project_id": false,
+                "date_start": "2025-04-13 02:37:47",
+                "date_finished": "2025-04-13 03:37:47",
+                "date_deadline": false,
+                "product_id": {
+                    "id": 33,
+                    "display_name": "[FURN_8855] Drawer"
+                },
+                "lot_producing_id": false,
+                "bom_id": {
+                    "id": 7,
+                    "display_name": "PRIM-ASSEM: [FURN_8855] Drawer"
+                },
+                "activity_ids": [],
+                "activity_exception_decoration": false,
+                "activity_exception_icon": false,
+                "activity_state": false,
+                "activity_summary": false,
+                "activity_type_icon": false,
+                "activity_type_id": false,
+                "origin": false,
+                "user_id": {
+                    "id": 1,
+                    "display_name": "OdooBot"
+                },
+                "components_availability_state": "available",
+                "components_availability": "Available",
+                "reservation_state": "assigned",
+                "product_qty": 5.0,
+                "duration_expected": 0.0,
+                "duration": 0.0,
+                "state": "confirmed",
+                "delay_alert_date": false,
+                "is_delayed": false,
+                "json_popover": false
+            }
+        ]
+    }
+}
