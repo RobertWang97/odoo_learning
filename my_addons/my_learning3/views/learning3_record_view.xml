@@ -5,11 +5,11 @@
         <field name="model">my_learning3</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name2" required="1"/>
-                <field name="comment2" placeholder="备注" required="1"/>
-                <field name="selection2" invisible="name2!='1'"/>
-                <field name="many2one2" required="1"/>
-                <field name="id2" required="1"/>
+                <field name="name" required="1"/>
+                <field name="description" placeholder="备注" required="1"/>
+                <field name="title" invisible="name!='1'"/>
+                <field name="radio1" required="1"/>
+                <field name="value"/>
             </list>
         </field>
     </record>
@@ -22,17 +22,17 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="name2" required="1"/>
+                            <field name="name" required="1"/>
                             <notebook>
                                 <page string="备注">
-                                    <field name="comment2" placeholder="备注" required="1"/>
+                                    <field name="description" placeholder="备注" required="1"/>
                                 </page>
                             </notebook>
                         </group>
                         <group>
-                            <field name="selection2" invisible="name2!='1'"/>
-                            <field name="many2one2" required="1"/>
-                            <field name="id2" required="1"/>
+                            <field name="title" invisible="name!='1'"/>
+                            <field name="radio1" required="1"/>
+                            <field name="value"/>
                         </group>
                     </group>
                 </sheet>
@@ -46,25 +46,46 @@
         <field name="model">my_learning3</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name2"/>
-                <field name="comment2"/>
-                <field name="selection2"/>
-                <field name="many2one2"/>
-                <field name="id2"/>
-                <filter string="名称过滤" name="name2" domain="[('name2' , '=' , 'a')]" />
+                <field name="name"/>
+                <field name="description"/>
+                <field name="title"/>
+                <field name="radio1"/>
+                <field name="value" />
+                <filter string="名称过滤" name="name" domain="[('name' , '=' , 'a')]"/>
                 <group expand="1">
-                    <filter string="名称分组" name="name2" context="{'group_by':'name2'}" />
+                    <filter string="名称分组" name="name" context="{'group_by':'name'}"/>
                 </group>
             </search>
         </field>
     </record>
 
+    <record id="learning3_pivot_view" model="ir.ui.view">
+        <field name="name">learning3Pivot</field>
+        <field name="model">my_learning3</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="name" type="row" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="learning3_graph_view" model="ir.ui.view">
+        <field name="name">learning3Graph</field>
+        <field name="model">my_learning3</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="name" type="row" />
+            </pivot>
+        </field>
+    </record>
+
+
     <record id="learning3_act_window" model="ir.actions.act_window">
         <field name="name">第三个学习</field>
         <field name="res_model">my_learning3</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">list,form,pivot,graph</field>
     </record>
-    <menuitem name="学习模块2" id="learning3_record_menu_root"
+    <menuitem name="学习模块3" id="learning3_record_menu_root"
               groups="base.group_user"
               sequence="10"/>
     <menuitem name="第三个学习模块" id="learning3_record_menu_sec"
