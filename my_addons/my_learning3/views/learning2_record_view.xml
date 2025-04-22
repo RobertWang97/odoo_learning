@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="learning2_list_view" model="ir.ui.view">
+        <field name="name">第二个学习列表</field>
+        <field name="model">learning2</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name2" required="1"/>
+                <field name="comment2" placeholder="备注" required="1"/>
+                <field name="selection2" invisible="name2!='1'"/>
+                <field name="many2one2" required="1"/>
+                <field name="id2" required="1"/>
+            </list>
+        </field>
+    </record>
+    <record id="learning2_form_view" model="ir.ui.view">
+        <field name="name">第二个学习表单</field>
+        <field name="model">learning2</field>
+        <field name="arch" type="xml">
+            <form string="learning2">
+                <header></header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name2" required="1"/>
+                            <notebook>
+                                <page string="备注">
+                                    <field name="comment2" placeholder="备注" required="1"/>
+                                </page>
+                            </notebook>
+                        </group>
+                        <group>
+                            <field name="selection2" invisible="name2!='1'"/>
+                            <field name="many2one2" required="1"/>
+                            <field name="id2" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer></footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="learning2_search_view" model="ir.ui.view">
+        <field name="name">第二个学习搜索</field>
+        <field name="model">learning2</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name2"/>
+                <field name="comment2"/>
+                <field name="selection2"/>
+                <field name="many2one2"/>
+                <field name="id2"/>
+                <filter string="名称过滤" name="name2" domain="[('name2' , '=' , 'a')]" />
+                <group expand="1">
+                    <filter string="名称分组" name="name2" context="{'group_by':'name2'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="learning2_act_window" model="ir.actions.act_window">
+        <field name="name">第二个学习</field>
+        <field name="res_model">learning2</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem name="学习模块2" id="learning2_record_menu_root"
+              groups="base.group_user"
+              sequence="10"/>
+    <menuitem name="第二个学习模块" id="learning2_record_menu_sec"
+              parent="learning2_record_menu_root"
+              action="learning2_act_window"
+              sequence="10"/>
+</odoo>
