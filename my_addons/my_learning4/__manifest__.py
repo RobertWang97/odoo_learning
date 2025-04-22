@@ -1,6 +1,6 @@
 {
-    'name': 'learning2',
-    'summary': 'my learning2',
+    'name': 'learning4',
+    'summary': 'my learning4',
     'description': 'Start Learning',
     'version': '1.0',
     'author': 'Robert Wang',
