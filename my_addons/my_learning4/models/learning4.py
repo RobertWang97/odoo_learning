@@ -18,6 +18,8 @@ class learning4(models.Model):
                           string='填报人2',
                           default=_default_current_user_id, required=True)
 
+    active = fields.Boolean(default=True)
+
     @api.model_create_multi
     def create(self, vals):
         res = super(learning4, self).create(vals)
@@ -26,10 +28,28 @@ class learning4(models.Model):
 
     # @api.multi
     @api.model
-    def write(self, vals) :
+    def write(self, vals):
+        old_value_name = self.name2
         res = super(learning4, self).write(vals)
+        new_value_name = self.name2
         return res
 
     @api.onchange('comment2')
     def onchange_comment2(self):
         self.comment2 = "323"
+
+    # @api.model
+    # def unlink(self):
+    #     res = super(learning4, self).unlink()
+    #     return res
+
+
+    def unlink(self):
+        for obj in self:
+            obj.active = False
+        return True
+
+    def my_unlink(self):
+        self.active = False
+        # return super(learning4, self).
+        # return True
