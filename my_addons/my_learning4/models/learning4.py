@@ -23,7 +23,7 @@ class learning4(models.Model):
     @api.model_create_multi
     def create(self, vals):
         res = super(learning4, self).create(vals)
-        res.name2 = "ddd"
+        # res.name2 = "ddd"
         return res
 
     # @api.multi
@@ -43,7 +43,6 @@ class learning4(models.Model):
     #     res = super(learning4, self).unlink()
     #     return res
 
-
     def unlink(self):
         for obj in self:
             obj.active = False
@@ -53,3 +52,30 @@ class learning4(models.Model):
         self.active = False
         # return super(learning4, self).
         # return True
+
+    def my_search(self):
+        domain = [('active', '=', True), ('name2', '=', 'aa')]
+        objs = self.search(domain)
+        objs2 = self.browse([14, 15])
+        print(objs, objs2)
+        user_objs = self.env['res.users'].search([('id', '=', 2)])
+        user_objs2 = self.env['res.users'].browse([1, 2, 3])
+        print(user_objs)
+        print(user_objs2)
+        user_objs3 = self.env['res.users'].sudo().search([('id', '=', 2)])
+        user_objs4 = self.env['res.users'].sudo().browse([1, 2, 3])
+        print(user_objs3)
+        print(user_objs4)
+
+    def create_or_write(self):
+        # self.env['res.users'].create([{
+        #     "name": "测试账户",
+        #     "email": "aa@dd.com",
+        #     "login": "aa@dd.com",
+        # }])
+        users_env = self.env['res.users'].sudo()
+        user_id = users_env.search([("name", "=", "测试账户")])
+        res = user_id.write({
+            "login": "bb@dd.com"
+        })
+        return res
