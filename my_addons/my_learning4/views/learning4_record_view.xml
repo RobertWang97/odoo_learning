@@ -19,10 +19,12 @@
         <field name="arch" type="xml">
             <form string="learning4">
                 <header>
-                    <button string="我的删除1" type="object" class="oe_highlight" name="my_unlink" />
+                    <button string="我的删除1" type="object" class="oe_highlight" name="my_unlink"/>
+                    <button string="搜索按钮" type="object" class="oe_highlight" name="my_search" />
+                    <button string="创建或修改" type="object" class="oe_highlight" name="create_or_write" />
                 </header>
                 <sheet>
-                    <button string="我的删除2" type="object" name="my_unlink" />
+                    <button string="我的删除2" type="object" name="my_unlink"/>
                     <group>
                         <group>
                             <field name="name2" required="1"/>
@@ -54,9 +56,9 @@
                 <field name="selection2"/>
                 <field name="many2one2"/>
                 <field name="id2"/>
-                <filter string="名称过滤" name="name2" domain="[('name2' , '=' , 'a')]" />
+                <filter string="名称过滤" name="name2" domain="[('name2' , '=' , 'a')]"/>
                 <group expand="1">
-                    <filter string="名称分组" name="name2" context="{'group_by':'name2'}" />
+                    <filter string="名称分组" name="name2" context="{'group_by':'name2'}"/>
                 </group>
             </search>
         </field>
